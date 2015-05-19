@@ -20,6 +20,8 @@
 		1302073C1B0BF0AE00A5CB2C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1302073A1B0BF0AE00A5CB2C /* Interface.storyboard */; };
 		1302073E1B0BF0AE00A5CB2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1302073D1B0BF0AE00A5CB2C /* Images.xcassets */; };
 		130207411B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 130207241B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		16980DC950B63DE18615493B /* Pods_WeakStreaksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EDC8C159B68A2AFACE366 /* Pods_WeakStreaksTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E86F5332BA1031CF25275F92 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADC48A6736ED4E2F35030BB /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,12 @@
 		130207391B0BF0AE00A5CB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1302073B1B0BF0AE00A5CB2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		1302073D1B0BF0AE00A5CB2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5B5EDC8C159B68A2AFACE366 /* Pods_WeakStreaksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeakStreaksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67706F8AABC3B760B4E51750 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9811AB68399AA1DF34D7F920 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AADC48A6736ED4E2F35030BB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62EEC882D88D060B14C20FA /* Pods-WeakStreaksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeakStreaksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeakStreaksTests/Pods-WeakStreaksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF44747658FAD8B231A94290 /* Pods-WeakStreaksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeakStreaksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeakStreaksTests/Pods-WeakStreaksTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E86F5332BA1031CF25275F92 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16980DC950B63DE18615493B /* Pods_WeakStreaksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +118,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		083AD25E14A44BBAA681A4E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9811AB68399AA1DF34D7F920 /* Pods.debug.xcconfig */,
+				67706F8AABC3B760B4E51750 /* Pods.release.xcconfig */,
+				B62EEC882D88D060B14C20FA /* Pods-WeakStreaksTests.debug.xcconfig */,
+				DF44747658FAD8B231A94290 /* Pods-WeakStreaksTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		130206CB1B0BEE7C00A5CB2C = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +137,8 @@
 				130207251B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension */,
 				130207371B0BF0AE00A5CB2C /* WeakStreaks WatchKit App */,
 				130206D51B0BEE7C00A5CB2C /* Products */,
+				083AD25E14A44BBAA681A4E5 /* Pods */,
+				97BFE78B4422AF3B31CAFAD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +229,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		97BFE78B4422AF3B31CAFAD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AADC48A6736ED4E2F35030BB /* Pods.framework */,
+				5B5EDC8C159B68A2AFACE366 /* Pods_WeakStreaksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,10 +245,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 130206F31B0BEE7D00A5CB2C /* Build configuration list for PBXNativeTarget "WeakStreaks" */;
 			buildPhases = (
+				275EC597FBB26B7B0031F429 /* Check Pods Manifest.lock */,
 				130206D01B0BEE7C00A5CB2C /* Sources */,
 				130206D11B0BEE7C00A5CB2C /* Frameworks */,
 				130206D21B0BEE7C00A5CB2C /* Resources */,
 				130207481B0BF0AE00A5CB2C /* Embed App Extensions */,
+				1CCCC783B2EF51DCDE766C77 /* Embed Pods Frameworks */,
+				EB894AB3C7B83EDF235FE239 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 130206F61B0BEE7D00A5CB2C /* Build configuration list for PBXNativeTarget "WeakStreaksTests" */;
 			buildPhases = (
+				978BBAD676271912990300C0 /* Check Pods Manifest.lock */,
 				130206E51B0BEE7D00A5CB2C /* Sources */,
 				130206E61B0BEE7D00A5CB2C /* Frameworks */,
 				130206E71B0BEE7D00A5CB2C /* Resources */,
+				29F07E58F6CF209F15BB7E6E /* Embed Pods Frameworks */,
+				9D9752EFB7825323FC2643F6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,6 +398,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CCCC783B2EF51DCDE766C77 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		275EC597FBB26B7B0031F429 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		29F07E58F6CF209F15BB7E6E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeakStreaksTests/Pods-WeakStreaksTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		978BBAD676271912990300C0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D9752EFB7825323FC2643F6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeakStreaksTests/Pods-WeakStreaksTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB894AB3C7B83EDF235FE239 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		130206D01B0BEE7C00A5CB2C /* Sources */ = {
@@ -514,6 +645,7 @@
 		};
 		130206F41B0BEE7D00A5CB2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9811AB68399AA1DF34D7F920 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WeakStreaks/Info.plist;
@@ -524,6 +656,7 @@
 		};
 		130206F51B0BEE7D00A5CB2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67706F8AABC3B760B4E51750 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WeakStreaks/Info.plist;
@@ -534,6 +667,7 @@
 		};
 		130206F71B0BEE7D00A5CB2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B62EEC882D88D060B14C20FA /* Pods-WeakStreaksTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -553,6 +687,7 @@
 		};
 		130206F81B0BEE7D00A5CB2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF44747658FAD8B231A94290 /* Pods-WeakStreaksTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -568,6 +703,7 @@
 		};
 		130207421B0BF0AE00A5CB2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9811AB68399AA1DF34D7F920 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -582,6 +718,7 @@
 		};
 		130207431B0BF0AE00A5CB2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67706F8AABC3B760B4E51750 /* Pods.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "WeakStreaks WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -592,6 +729,7 @@
 		};
 		130207441B0BF0AE00A5CB2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9811AB68399AA1DF34D7F920 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -610,6 +748,7 @@
 		};
 		130207451B0BF0AE00A5CB2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67706F8AABC3B760B4E51750 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IBSC_MODULE = WeakStreaks_WatchKit_Extension;
@@ -659,6 +798,7 @@
 				130207451B0BF0AE00A5CB2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		130207471B0BF0AE00A5CB2C /* Build configuration list for PBXNativeTarget "WeakStreaks WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -667,6 +807,7 @@
 				130207431B0BF0AE00A5CB2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
