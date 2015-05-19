@@ -13,6 +13,14 @@
 		130206E11B0BEE7C00A5CB2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 130206E01B0BEE7C00A5CB2C /* Images.xcassets */; };
 		130206E41B0BEE7C00A5CB2C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130206E21B0BEE7C00A5CB2C /* LaunchScreen.xib */; };
 		130206F01B0BEE7D00A5CB2C /* WeakStreaksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130206EF1B0BEE7D00A5CB2C /* WeakStreaksTests.swift */; };
+		1302072A1B0BF0AE00A5CB2C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130207291B0BF0AE00A5CB2C /* InterfaceController.swift */; };
+		1302072C1B0BF0AE00A5CB2C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1302072B1B0BF0AE00A5CB2C /* NotificationController.swift */; };
+		1302072E1B0BF0AE00A5CB2C /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1302072D1B0BF0AE00A5CB2C /* GlanceController.swift */; };
+		130207301B0BF0AE00A5CB2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1302072F1B0BF0AE00A5CB2C /* Images.xcassets */; };
+		130207341B0BF0AE00A5CB2C /* WeakStreaks WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 130207331B0BF0AE00A5CB2C /* WeakStreaks WatchKit App.app */; };
+		1302073C1B0BF0AE00A5CB2C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1302073A1B0BF0AE00A5CB2C /* Interface.storyboard */; };
+		1302073E1B0BF0AE00A5CB2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1302073D1B0BF0AE00A5CB2C /* Images.xcassets */; };
+		130207411B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 130207241B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +31,35 @@
 			remoteGlobalIDString = 130206D31B0BEE7C00A5CB2C;
 			remoteInfo = WeakStreaks;
 		};
+		130207351B0BF0AE00A5CB2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 130206CC1B0BEE7C00A5CB2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 130207321B0BF0AE00A5CB2C;
+			remoteInfo = "WeakStreaks WatchKit App";
+		};
+		1302073F1B0BF0AE00A5CB2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 130206CC1B0BEE7C00A5CB2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 130207231B0BF0AE00A5CB2C;
+			remoteInfo = "WeakStreaks WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		130207481B0BF0AE00A5CB2C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				130207411B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		130206D41B0BEE7C00A5CB2C /* WeakStreaks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeakStreaks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +72,17 @@
 		130206E91B0BEE7D00A5CB2C /* WeakStreaksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeakStreaksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		130206EE1B0BEE7D00A5CB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		130206EF1B0BEE7D00A5CB2C /* WeakStreaksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakStreaksTests.swift; sourceTree = "<group>"; };
+		130207241B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WeakStreaks WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		130207271B0BF0AE00A5CB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		130207281B0BF0AE00A5CB2C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		130207291B0BF0AE00A5CB2C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		1302072B1B0BF0AE00A5CB2C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		1302072D1B0BF0AE00A5CB2C /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		1302072F1B0BF0AE00A5CB2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		130207331B0BF0AE00A5CB2C /* WeakStreaks WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeakStreaks WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		130207391B0BF0AE00A5CB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1302073B1B0BF0AE00A5CB2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1302073D1B0BF0AE00A5CB2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		130207211B0BF0AE00A5CB2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +115,8 @@
 			children = (
 				130206D61B0BEE7C00A5CB2C /* WeakStreaks */,
 				130206EC1B0BEE7D00A5CB2C /* WeakStreaksTests */,
+				130207251B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension */,
+				130207371B0BF0AE00A5CB2C /* WeakStreaks WatchKit App */,
 				130206D51B0BEE7C00A5CB2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +126,8 @@
 			children = (
 				130206D41B0BEE7C00A5CB2C /* WeakStreaks.app */,
 				130206E91B0BEE7D00A5CB2C /* WeakStreaksTests.xctest */,
+				130207241B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension.appex */,
+				130207331B0BF0AE00A5CB2C /* WeakStreaks WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +170,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		130207251B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				130207291B0BF0AE00A5CB2C /* InterfaceController.swift */,
+				1302072B1B0BF0AE00A5CB2C /* NotificationController.swift */,
+				1302072D1B0BF0AE00A5CB2C /* GlanceController.swift */,
+				1302072F1B0BF0AE00A5CB2C /* Images.xcassets */,
+				130207261B0BF0AE00A5CB2C /* Supporting Files */,
+			);
+			path = "WeakStreaks WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		130207261B0BF0AE00A5CB2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				130207271B0BF0AE00A5CB2C /* Info.plist */,
+				130207281B0BF0AE00A5CB2C /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		130207371B0BF0AE00A5CB2C /* WeakStreaks WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				1302073A1B0BF0AE00A5CB2C /* Interface.storyboard */,
+				1302073D1B0BF0AE00A5CB2C /* Images.xcassets */,
+				130207381B0BF0AE00A5CB2C /* Supporting Files */,
+			);
+			path = "WeakStreaks WatchKit App";
+			sourceTree = "<group>";
+		};
+		130207381B0BF0AE00A5CB2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				130207391B0BF0AE00A5CB2C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +219,12 @@
 				130206D01B0BEE7C00A5CB2C /* Sources */,
 				130206D11B0BEE7C00A5CB2C /* Frameworks */,
 				130206D21B0BEE7C00A5CB2C /* Resources */,
+				130207481B0BF0AE00A5CB2C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				130207401B0BF0AE00A5CB2C /* PBXTargetDependency */,
 			);
 			name = WeakStreaks;
 			productName = WeakStreaks;
@@ -150,6 +249,39 @@
 			productReference = 130206E91B0BEE7D00A5CB2C /* WeakStreaksTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		130207231B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 130207471B0BF0AE00A5CB2C /* Build configuration list for PBXNativeTarget "WeakStreaks WatchKit Extension" */;
+			buildPhases = (
+				130207201B0BF0AE00A5CB2C /* Sources */,
+				130207211B0BF0AE00A5CB2C /* Frameworks */,
+				130207221B0BF0AE00A5CB2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				130207361B0BF0AE00A5CB2C /* PBXTargetDependency */,
+			);
+			name = "WeakStreaks WatchKit Extension";
+			productName = "WeakStreaks WatchKit Extension";
+			productReference = 130207241B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		130207321B0BF0AE00A5CB2C /* WeakStreaks WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 130207461B0BF0AE00A5CB2C /* Build configuration list for PBXNativeTarget "WeakStreaks WatchKit App" */;
+			buildPhases = (
+				130207311B0BF0AE00A5CB2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WeakStreaks WatchKit App";
+			productName = "WeakStreaks WatchKit App";
+			productReference = 130207331B0BF0AE00A5CB2C /* WeakStreaks WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +297,12 @@
 					130206E81B0BEE7D00A5CB2C = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 130206D31B0BEE7C00A5CB2C;
+					};
+					130207231B0BF0AE00A5CB2C = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					130207321B0BF0AE00A5CB2C = {
+						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
 			};
@@ -183,6 +321,8 @@
 			targets = (
 				130206D31B0BEE7C00A5CB2C /* WeakStreaks */,
 				130206E81B0BEE7D00A5CB2C /* WeakStreaksTests */,
+				130207231B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension */,
+				130207321B0BF0AE00A5CB2C /* WeakStreaks WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +342,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		130207221B0BF0AE00A5CB2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				130207341B0BF0AE00A5CB2C /* WeakStreaks WatchKit App.app in Resources */,
+				130207301B0BF0AE00A5CB2C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		130207311B0BF0AE00A5CB2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1302073C1B0BF0AE00A5CB2C /* Interface.storyboard in Resources */,
+				1302073E1B0BF0AE00A5CB2C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +383,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		130207201B0BF0AE00A5CB2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1302072C1B0BF0AE00A5CB2C /* NotificationController.swift in Sources */,
+				1302072A1B0BF0AE00A5CB2C /* InterfaceController.swift in Sources */,
+				1302072E1B0BF0AE00A5CB2C /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +400,16 @@
 			isa = PBXTargetDependency;
 			target = 130206D31B0BEE7C00A5CB2C /* WeakStreaks */;
 			targetProxy = 130206EA1B0BEE7D00A5CB2C /* PBXContainerItemProxy */;
+		};
+		130207361B0BF0AE00A5CB2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 130207321B0BF0AE00A5CB2C /* WeakStreaks WatchKit App */;
+			targetProxy = 130207351B0BF0AE00A5CB2C /* PBXContainerItemProxy */;
+		};
+		130207401B0BF0AE00A5CB2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 130207231B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension */;
+			targetProxy = 1302073F1B0BF0AE00A5CB2C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -250,6 +428,14 @@
 				130206E31B0BEE7C00A5CB2C /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		1302073A1B0BF0AE00A5CB2C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1302073B1B0BF0AE00A5CB2C /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -392,6 +578,62 @@
 			};
 			name = Release;
 		};
+		130207421B0BF0AE00A5CB2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WeakStreaks WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		130207431B0BF0AE00A5CB2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "WeakStreaks WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		130207441B0BF0AE00A5CB2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = WeakStreaks_WatchKit_Extension;
+				INFOPLIST_FILE = "WeakStreaks WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		130207451B0BF0AE00A5CB2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = WeakStreaks_WatchKit_Extension;
+				INFOPLIST_FILE = "WeakStreaks WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,12 +653,30 @@
 				130206F51B0BEE7D00A5CB2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		130206F61B0BEE7D00A5CB2C /* Build configuration list for PBXNativeTarget "WeakStreaksTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				130206F71B0BEE7D00A5CB2C /* Debug */,
 				130206F81B0BEE7D00A5CB2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		130207461B0BF0AE00A5CB2C /* Build configuration list for PBXNativeTarget "WeakStreaks WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				130207441B0BF0AE00A5CB2C /* Debug */,
+				130207451B0BF0AE00A5CB2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		130207471B0BF0AE00A5CB2C /* Build configuration list for PBXNativeTarget "WeakStreaks WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				130207421B0BF0AE00A5CB2C /* Debug */,
+				130207431B0BF0AE00A5CB2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
