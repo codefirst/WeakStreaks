@@ -11,7 +11,10 @@ import Foundation
 
 
 class GlanceController: WKInterfaceController {
+    @IBOutlet weak var currentStreaks: WKInterfaceLabel!
 
+    // TODO: ユーザ名を自由に指定できるようにする(要: AppGroup?)
+    let github = Github(user: "mzp")
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -21,6 +24,10 @@ class GlanceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+
+        github.contributions { (currentStreaks : Int) in
+            self.currentStreaks.setText("\(currentStreaks)")
+        }
     }
 
     override func didDeactivate() {
