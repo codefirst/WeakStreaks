@@ -12,6 +12,7 @@ import Foundation
 
 class GlanceController: WKInterfaceController {
     @IBOutlet weak var currentStreaks: WKInterfaceLabel!
+    @IBOutlet weak var graph: WKInterfaceImage!
 
     // TODO: ユーザ名を自由に指定できるようにする(要: AppGroup?)
     let github = Github(user: "mzp")
@@ -25,8 +26,16 @@ class GlanceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
 
-        github.contributions { (currentStreaks : Int) in
+
+
+        github.contributions { (currentStreaks : Int, currentWeek: [Int]?) in
             self.currentStreaks.setText("\(currentStreaks)")
+
+            if let data = currentWeek {
+                // FIXME: http://qiita.com/_tid_/items/55667b00ce158a28428a を使って結果をキャッシュする
+                let image = WeekGraph(data: data).draw()
+                self.graph.setImage(image)
+            }
         }
     }
 

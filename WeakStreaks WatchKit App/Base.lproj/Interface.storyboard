@@ -15,20 +15,20 @@
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="WeakStreaks_WatchKit_App" customModuleProvider="target">
+                <glanceController spacing="0.0" topTemplateType="body1Large" id="0uZ-2p-rRc" customClass="GlanceController" customModule="WeakStreaks_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y">
+                        <label alignment="left" text="Current Streaks" id="X1m-Du-r7y"/>
+                        <label alignment="left" text="1234" id="DLq-cF-Ncj"/>
+                        <group alignment="left" id="uCw-4Q-Ouw">
                             <items>
-                                <label alignment="left" text="9999" id="xY3-Ee-8Ec">
-                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                </label>
+                                <imageView width="1" height="1" alignment="left" id="Avo-1e-J2b"/>
                             </items>
                         </group>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                     <connections>
-                        <outlet property="currentStreaks" destination="xY3-Ee-8Ec" id="AvQ-MU-0WU"/>
+                        <outlet property="currentStreaks" destination="DLq-cF-Ncj" id="PhE-we-VqT"/>
+                        <outlet property="graph" destination="Avo-1e-J2b" id="dGJ-sn-LGG"/>
                     </connections>
                 </glanceController>
             </objects>
