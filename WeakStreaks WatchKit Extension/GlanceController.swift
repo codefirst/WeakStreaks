@@ -10,6 +10,21 @@ import WatchKit
 import Foundation
 
 
+private extension Array {
+    func takeWhile(@noescape f: (Element) -> Bool) -> Array {
+        var a = [Element]()
+        for elem in self {
+            if f(elem) {
+                a.append(elem)
+            } else {
+                break
+            }
+        }
+        return a
+    }
+}
+
+
 class GlanceController: WKInterfaceController {
     @IBOutlet weak var currentStreaks: WKInterfaceLabel!
     @IBOutlet weak var graph: WKInterfaceImage!
@@ -27,7 +42,8 @@ class GlanceController: WKInterfaceController {
         super.willActivate()
         
         github.contributions { (data: [ContributionByDate]) -> Void in
-            self.currentStreaks.setText("\(data.last?.count ?? 0)")
+            let streaks = data.reverse().takeWhile{$0.count > 0}.count
+            self.currentStreaks.setText("\(streaks)")
             let image = ContributionsCalendar(data: data).draw(CGSizeMake(272, 203))
             self.graph.setImage(image)
         }
