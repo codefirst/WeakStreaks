@@ -3,6 +3,8 @@ platform :ios, '8.0'
 
 use_frameworks!
 
+link_with 'WeakStreaks', 'WeakStreaks WatchKit Extension'
+
 pod 'Alamofire'
 
 target 'WeakStreaksTests' do
