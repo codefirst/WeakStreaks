@@ -25,18 +25,23 @@ class GlanceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-
-
-
-        github.contributions { (currentStreaks : Int, currentWeek: [Int]?) in
-            self.currentStreaks.setText("\(currentStreaks)")
-
-            if let data = currentWeek {
-                // FIXME: http://qiita.com/_tid_/items/55667b00ce158a28428a を使って結果をキャッシュする
-                let image = WeekGraph(data: data).draw()
-                self.graph.setImage(image)
-            }
+        
+        github.contributions { (data: [ContributionByDate]) -> Void in
+            self.currentStreaks.setText("\(data.last?.count ?? 0)")
+            let image = ContributionsCalendar(data: data).draw(CGSizeMake(272, 203))
+            self.graph.setImage(image)
         }
+        return
+//        
+//        github.contributions { (currentStreaks : Int, currentWeek: [Int]?) in
+//            self.currentStreaks.setText("\(currentStreaks)")
+//
+//            if let data = currentWeek {
+//                // FIXME: http://qiita.com/_tid_/items/55667b00ce158a28428a を使って結果をキャッシュする
+//                let image = WeekGraph(data: data).draw()
+//                self.graph.setImage(image)
+//            }
+//        }
     }
 
     override func didDeactivate() {
