@@ -26,6 +26,12 @@ private extension NSDate {
     var dayOfWeek: Int {
         return calendar.component(.CalendarUnitWeekday, fromDate: self)
     }
+    
+    func numberOfWeeksFromWeekOfDate(date: NSDate) -> Int {
+        let sundayOfA = calendar.dateByAddingUnit(.CalendarUnitWeekday, value: 1 - date.dayOfWeek, toDate: date, options: nil)!
+        let sundayOfB = calendar.dateByAddingUnit(.CalendarUnitWeekday, value: 1 - self.dayOfWeek, toDate: self, options: nil)!
+        return calendar.components(.CalendarUnitWeekOfYear, fromDate: sundayOfA, toDate: sundayOfB, options: nil).weekOfYear
+    }
 }
 
 
@@ -47,13 +53,13 @@ class ContributionsCalendar {
         let margin = CGFloat(1)
         let cellSide = floor((size.height - CGFloat(cols - 1) * margin) / CGFloat(cols))
         
-        let lastWeekOfYear = data.last!.date.weekOfYear
+        let today = NSDate()
         
         for d in data {
             let date = d.date
             color(contributions: d.count).setFill()
             
-            let x = size.width - cellSide - CGFloat(lastWeekOfYear - date.weekOfYear) * (cellSide + margin)
+            let x = size.width - cellSide - CGFloat(today.numberOfWeeksFromWeekOfDate(date)) * (cellSide + margin)
             let y = CGFloat(date.dayOfWeek - 1) * (cellSide + margin)
             UIRectFill(CGRectMake(x, y, cellSide, cellSide))
         }
