@@ -19,7 +19,7 @@ private func color(#contributions: Int) -> UIColor {
 }
 
 private let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
-private extension NSDate {
+extension NSDate {
     var weekOfYear: Int {
         return calendar.component(.CalendarUnitWeekOfYear, fromDate: self)
     }
