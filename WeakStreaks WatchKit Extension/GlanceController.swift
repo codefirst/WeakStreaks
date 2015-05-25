@@ -27,6 +27,7 @@ private extension Array {
 
 class GlanceController: WKInterfaceController {
     @IBOutlet weak var currentStreaks: WKInterfaceLabel!
+    @IBOutlet weak var streaksUnitLabel: WKInterfaceLabel!
     @IBOutlet weak var graph: WKInterfaceImage!
 
     // TODO: ユーザ名を自由に指定できるようにする(要: AppGroup?)
@@ -43,7 +44,23 @@ class GlanceController: WKInterfaceController {
         
         github.contributions { (data: [ContributionByDate]) -> Void in
             let streaks = data.reverse().takeWhile{$0.count > 0}.count
-            self.currentStreaks.setText("\(streaks)")
+            
+            let today = NSDate()
+            var weekStreaks = 0
+            for w in 0...51 {
+                let contributionsOfTheWeek = data.filter { today.numberOfWeeksFromWeekOfDate($0.date) == w }
+                
+                // 今日の分がまだ取得データに載っていなく，その週のデータ数がゼロの場合はスキップ(前週から数える)
+                if w == 0 && contributionsOfTheWeek.count == 0 { continue }
+                
+                if contributionsOfTheWeek.reduce(0, combine: {$0 + $1.count}) > 0 {
+                    weekStreaks += 1
+                } else {
+                    break
+                }
+            }
+            self.currentStreaks.setText("\(weekStreaks)")
+            self.streaksUnitLabel.setText(weekStreaks == 1 ? "week" : "weeks")
             let image = ContributionsCalendar(data: data).draw(CGSizeMake(272, 203))
             self.graph.setImage(image)
         }
