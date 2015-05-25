@@ -1,4 +1,5 @@
 import Alamofire
+import Foundation
 
 typealias ContributionByDate = (date: NSDate, count: Int)
 
@@ -14,42 +15,46 @@ class Github {
         self.user = user
     }
 
-    func contributions(f : (currentStreaks: Int, currentWeek : [Int]?) -> Void) {
+    func contributions(f : (dayStreaks: Int, weekStreaks: Int, data : [ContributionByDate]) -> Void) {
         Alamofire
             .request(.GET, "\(ENTRY_POINT)/\(user)")
             .responseJSON { (_, _, json, _) in
                 let dict = json as? NSDictionary
-                let currentStreaks = dict?.valueForKey("current_streaks") as? Int
-                let currentWeek = dict?.valueForKey("current_week") as? [Int]
-                f(currentStreaks: currentStreaks ?? 0, currentWeek: currentWeek)
+                let dayStreaks = dict?.valueForKey("current_streaks") as? Int
+                let data = (dict?.valueForKey("data") as? [String:Int]).map{ self.parseData($0) }
+                let weekStreaks = data.map{ self.parseWeekStreak($0)}
+                f(dayStreaks: dayStreaks ?? 0, weekStreaks: weekStreaks ?? 0,data: data ?? [])
         }
     }
-    
-    func contributions(f: ([ContributionByDate]) -> Void) {
-        Alamofire
-            .request(.GET, "https://github.com/users/\(user)/contributions")
-            .responseString { (_, _, string, _) in
-                if let svg = string {
-                    let dateFormatter = NSDateFormatter()
-                    dateFormatter.dateFormat = "yyyy-MM-dd"
-                    
-                    // FIXME: let more robust matches
-                    let regex = NSRegularExpression(pattern: "data-count=\"(\\d+)\"\\s+data-date=\"(\\d+-\\d+-\\d+)\"", options: nil, error: nil)!
-                    let matches = regex.matchesInString(svg, options: nil, range: NSMakeRange(0, svg.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))) as! [NSTextCheckingResult]
-                    let data =  matches.flatMap { m -> [ContributionByDate] in
-                        let count = (svg as NSString).substringWithRange(m.rangeAtIndex(1)).toInt()
-                        let date = dateFormatter.dateFromString((svg as NSString).substringWithRange(m.rangeAtIndex(2)))
-                        
-                        if let count = count, let date = date {
-                            return [(date: date, count: count)]
-                        } else {
-                            return []
-                        }
-                        }.sorted { (a: ContributionByDate, b: ContributionByDate) -> Bool in
-                            a.date.compare(b.date) == .OrderedAscending
-                    }
-                    f(data)
-                }
+
+    private func parseWeekStreak(data : [ContributionByDate]) -> Int {
+        // TODO: ここで計算するのではなく、weakstreaks-service側でやってもいいかも?
+        let today = NSDate()
+        var weekStreaks = 0
+        for w in 0...51 {
+            let contributionsOfTheWeek = data.filter { today.numberOfWeeksFromWeekOfDate($0.date) == w }
+
+            // 今日の分がまだ取得データに載っていなく，その週のデータ数がゼロの場合はスキップ(前週から数える)
+            if contributionsOfTheWeek.reduce(0, combine: {$0 + $1.count}) > 0 {
+                weekStreaks += 1
+            } else {
+                break
+            }
         }
+        return weekStreaks
+    }
+
+    private func parseData(xs : [String:Int]) -> [ContributionByDate]{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        var ys : [ContributionByDate] = []
+
+        for (dateStr,count) in xs {
+            if let date = dateFormatter.dateFromString(dateStr) {
+                ys.append((date: date, count: count))
+            }
+        }
+        return ys
     }
 }
