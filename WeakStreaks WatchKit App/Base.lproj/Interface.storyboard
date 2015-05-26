@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -15,11 +15,17 @@
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" topTemplateType="body1Large" id="0uZ-2p-rRc" customClass="GlanceController" customModule="WeakStreaks_WatchKit_App" customModuleProvider="target">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="WeakStreaks_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Current Streaks" id="X1m-Du-r7y"/>
-                        <label alignment="left" text="1234" id="DLq-cF-Ncj"/>
-                        <group alignment="left" id="uCw-4Q-Ouw">
+                        <group alignment="left" id="VgR-zV-Awq">
+                            <items>
+                                <label height="38" alignment="left" verticalAlignment="bottom" text="---" id="kQu-wa-cY5">
+                                    <fontDescription key="font" type="system" pointSize="42"/>
+                                </label>
+                                <label alignment="left" verticalAlignment="bottom" text="weeks" id="um1-e1-KAY"/>
+                            </items>
+                        </group>
+                        <group alignment="left" radius="0.0" id="uCw-4Q-Ouw">
                             <items>
                                 <imageView width="1" height="1" alignment="left" id="Avo-1e-J2b"/>
                             </items>
@@ -27,8 +33,9 @@
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                     <connections>
-                        <outlet property="currentStreaks" destination="DLq-cF-Ncj" id="PhE-we-VqT"/>
+                        <outlet property="currentStreaks" destination="kQu-wa-cY5" id="MVM-0M-1id"/>
                         <outlet property="graph" destination="Avo-1e-J2b" id="dGJ-sn-LGG"/>
+                        <outlet property="streaksUnitLabel" destination="um1-e1-KAY" id="q0f-kK-pTS"/>
                     </connections>
                 </glanceController>
             </objects>

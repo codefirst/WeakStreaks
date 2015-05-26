@@ -9,9 +9,9 @@
 import WatchKit
 import Foundation
 
-
 class GlanceController: WKInterfaceController {
     @IBOutlet weak var currentStreaks: WKInterfaceLabel!
+    @IBOutlet weak var streaksUnitLabel: WKInterfaceLabel!
     @IBOutlet weak var graph: WKInterfaceImage!
 
     // TODO: ユーザ名を自由に指定できるようにする(要: AppGroup?)
@@ -25,17 +25,12 @@ class GlanceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-
-
-
-        github.contributions { (currentStreaks : Int, currentWeek: [Int]?) in
-            self.currentStreaks.setText("\(currentStreaks)")
-
-            if let data = currentWeek {
-                // FIXME: http://qiita.com/_tid_/items/55667b00ce158a28428a を使って結果をキャッシュする
-                let image = WeekGraph(data: data).draw()
-                self.graph.setImage(image)
-            }
+        
+        github.contributions { (_ : Int, weekStreaks: Int, data: [ContributionByDate]) -> Void in
+            self.currentStreaks.setText("\(weekStreaks)")
+            self.streaksUnitLabel.setText(weekStreaks == 1 ? "week" : "weeks")
+            let image = ContributionsCalendar(data: data).draw(CGSizeMake(272, 203))
+            self.graph.setImage(image)
         }
     }
 
