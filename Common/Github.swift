@@ -20,8 +20,8 @@ class Github {
             .request(.GET, "\(ENTRY_POINT)/\(user)")
             .responseJSON { (_, _, json, _) in
                 let dict = json as? NSDictionary
-                let dayStreaks = dict?.valueForKey("current_streaks") as? Int
-                let data = (dict?.valueForKey("data") as? [String:Int]).map{ self.parseData($0) }
+                let dayStreaks = dict?["current_streaks"] as? Int
+                let data = (dict?["data"] as? [String:Int]).map{ self.parseData($0) }
                 let weekStreaks = data.map{ self.parseWeekStreak($0)}
                 f(dayStreaks: dayStreaks ?? 0, weekStreaks: weekStreaks ?? 0,data: data ?? [])
         }
