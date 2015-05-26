@@ -21,3 +21,4 @@ Pods/*
 
 #other
 tmp/
+Config.xcconfig
