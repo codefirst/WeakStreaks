@@ -101,6 +101,7 @@
 		13511EA81B14AC9E00274A1E /* AppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGroup.h; sourceTree = "<group>"; };
 		13511EA91B14AC9E00274A1E /* AppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGroup.m; sourceTree = "<group>"; };
 		13511EAE1B14AE4800274A1E /* SafeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeTableViewController.swift; sourceTree = "<group>"; };
+		1360ACF81B189FEA007C2529 /* Config.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Config.xcconfig.example; sourceTree = "<group>"; };
 		139A4F921B14A7B0000D7F14 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		139A4F931B14AAA0000D7F14 /* WeakStreaks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WeakStreaks.entitlements; sourceTree = "<group>"; };
 		139A4F941B14AAB6000D7F14 /* WeakStreaks WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WeakStreaks WatchKit Extension.entitlements"; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				139A4F921B14A7B0000D7F14 /* Config.xcconfig */,
+				1360ACF81B189FEA007C2529 /* Config.xcconfig.example */,
 				13D45E151B0BF97B00C50675 /* Common */,
 				130206D61B0BEE7C00A5CB2C /* WeakStreaks */,
 				130206EC1B0BEE7D00A5CB2C /* WeakStreaksTests */,
