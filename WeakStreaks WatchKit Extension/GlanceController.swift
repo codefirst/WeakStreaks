@@ -14,7 +14,6 @@ class GlanceController: WKInterfaceController {
     @IBOutlet weak var streaksUnitLabel: WKInterfaceLabel!
     @IBOutlet weak var graph: WKInterfaceImage!
 
-    // TODO: ユーザ名を自由に指定できるようにする(要: AppGroup?)
     lazy var github : Github? = {
         if let username = AppGroup.userDefaults().stringForKey("username") {
             return Github(user: username)
@@ -25,14 +24,14 @@ class GlanceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
+
         // Configure interface objects here.
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
+
         github?.contributions { (_ : Int, weekStreaks: Int, data: [ContributionByDate]) -> Void in
             self.currentStreaks.setText("\(weekStreaks)")
             self.streaksUnitLabel.setText(weekStreaks == 1 ? "week" : "weeks")
