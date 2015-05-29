@@ -16,7 +16,7 @@ class GlanceController: WKInterfaceController {
 
     // TODO: ユーザ名を自由に指定できるようにする(要: AppGroup?)
     lazy var github : Github? = {
-        if let username = AppGroup.userDefaults().valueForKey("username") as? String {
+        if let username = AppGroup.userDefaults().stringForKey("username") {
             return Github(user: username)
         } else {
             return nil
