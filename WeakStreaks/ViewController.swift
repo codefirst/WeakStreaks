@@ -75,7 +75,9 @@ class ViewController: SafeTableViewController {
 
     // MARK: - actions
     @objc private func save() {
-        AppGroup.userDefaults().setObject(usernameField.text, forKey: "username")
+        let userDefaults = AppGroup.userDefaults()
+        userDefaults.setObject(usernameField.text, forKey: "username")
+        userDefaults.synchronize()
     }
 
 
