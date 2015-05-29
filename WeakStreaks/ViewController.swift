@@ -29,7 +29,7 @@ class ViewController: SafeTableViewController {
         super.viewDidLoad()
 
         println(AppGroup.appGroupID())
-        if let username = AppGroup.userDefaults().valueForKey("username") as? String? {
+        if let username = AppGroup.userDefaults().stringForKey("username") {
             usernameField.text = username
         }
     }
@@ -69,14 +69,13 @@ class ViewController: SafeTableViewController {
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        download()
         return true
     }
 
 
     // MARK: - actions
     @objc private func save() {
-        AppGroup.userDefaults().setValue(usernameField.text, forKey: "username")
+        AppGroup.userDefaults().setObject(usernameField.text, forKey: "username")
     }
 
 
