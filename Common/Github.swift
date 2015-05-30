@@ -36,6 +36,10 @@ class Github {
                 ys.append((date: date, count: count))
             }
         }
+        ys.sort {
+            $0.date.compare($1.date) == .OrderedAscending
+        }
+
         return ys
     }
 }
