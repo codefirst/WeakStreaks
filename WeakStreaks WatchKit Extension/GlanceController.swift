@@ -21,6 +21,8 @@ class GlanceController: WKInterfaceController {
             return nil
         }
     }()
+    
+    let graphSize = CGSizeMake(WKInterfaceDevice.currentDevice().screenBounds.width, 100)
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -36,7 +38,7 @@ class GlanceController: WKInterfaceController {
             let weekStreaks = WeekStreaks(data: data).call()
             self.currentStreaks.setText("\(weekStreaks)")
             self.streaksUnitLabel.setText(weekStreaks == 1 ? "week" : "weeks")
-            let image = ContributionsCalendar(data: data).draw(CGSizeMake(272, 203))
+            let image = ContributionsCalendar(data: data).draw(self.graphSize)
             self.graph.setImage(image)
         }
     }

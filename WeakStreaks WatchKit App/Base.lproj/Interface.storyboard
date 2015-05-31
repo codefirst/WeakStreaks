@@ -26,12 +26,13 @@
                                 <label alignment="left" verticalAlignment="bottom" text="days" id="hbk-V7-9Pu"/>
                             </items>
                         </group>
-                        <group width="1" height="115" alignment="left" id="CTv-rD-S82">
+                        <group width="1" alignment="left" radius="0.0" id="CTv-rD-S82">
                             <items>
-                                <imageView width="1" height="1" alignment="left" id="HXv-pZ-Ngg"/>
+                                <imageView width="1" height="100" alignment="left" contentMode="scaleAspectFit" id="HXv-pZ-Ngg"/>
                             </items>
                         </group>
                     </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                     <connections>
                         <outlet property="dayStreaks" destination="QsO-At-WPb" id="1Do-B8-E4J"/>
                         <outlet property="dayStreaksUnit" destination="hbk-V7-9Pu" id="Gct-I5-c6W"/>
@@ -58,7 +59,7 @@
                         </group>
                         <group alignment="left" radius="0.0" id="uCw-4Q-Ouw">
                             <items>
-                                <imageView width="1" height="1" alignment="left" id="Avo-1e-J2b"/>
+                                <imageView width="1" height="100" alignment="left" contentMode="scaleAspectFit" id="Avo-1e-J2b"/>
                             </items>
                         </group>
                     </items>

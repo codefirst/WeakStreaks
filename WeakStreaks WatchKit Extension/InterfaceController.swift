@@ -26,6 +26,8 @@ class InterfaceController: WKInterfaceController {
             return nil
         }
     }()
+    
+    let graphSize = CGSizeMake(WKInterfaceDevice.currentDevice().screenBounds.width, 100)
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -46,7 +48,7 @@ class InterfaceController: WKInterfaceController {
             self.dayStreaks.setText("\(dayStreaks)")
             self.dayStreaksUnit.setText(dayStreaks == 1 ? "day" : "days")
 
-            let image = ContributionsCalendar(data: data).draw(CGSizeMake(272, 203))
+            let image = ContributionsCalendar(data: data).draw(self.graphSize)
             self.graph.setImage(image)
         }
     }
