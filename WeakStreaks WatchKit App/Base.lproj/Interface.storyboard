@@ -49,12 +49,17 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="WeakStreaks_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="VgR-zV-Awq">
+                        <group alignment="left" radius="0.0" id="VgR-zV-Awq">
                             <items>
-                                <label height="38" alignment="left" verticalAlignment="bottom" text="---" id="kQu-wa-cY5">
-                                    <fontDescription key="font" type="system" pointSize="42"/>
-                                </label>
-                                <label alignment="left" verticalAlignment="bottom" text="weeks" id="um1-e1-KAY"/>
+                                <group alignment="left" verticalAlignment="bottom" radius="4" id="bay-U3-tux">
+                                    <items>
+                                        <label height="38" alignment="left" verticalAlignment="bottom" text="---" id="kQu-wa-cY5">
+                                            <fontDescription key="font" type="system" pointSize="42"/>
+                                        </label>
+                                        <label alignment="left" verticalAlignment="bottom" text="weeks" id="um1-e1-KAY"/>
+                                    </items>
+                                    <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
+                                </group>
                             </items>
                         </group>
                         <group alignment="left" radius="0.0" id="uCw-4Q-Ouw">
@@ -67,6 +72,7 @@
                     <connections>
                         <outlet property="currentStreaks" destination="kQu-wa-cY5" id="MVM-0M-1id"/>
                         <outlet property="graph" destination="Avo-1e-J2b" id="dGJ-sn-LGG"/>
+                        <outlet property="streaksGroup" destination="bay-U3-tux" id="DGF-VZ-55o"/>
                         <outlet property="streaksUnitLabel" destination="um1-e1-KAY" id="q0f-kK-pTS"/>
                     </connections>
                 </glanceController>
