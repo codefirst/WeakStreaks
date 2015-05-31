@@ -13,13 +13,15 @@ class WeekStreaksSpec : QuickSpec {
             let today = SpecHelper.date("2015-06-20")
             it("空の場合") {
                 let metrics = WeekStreaks(data: [])
-                expect(metrics.call(today)).to(equal(0))
+                expect(metrics.call(today).count).to(equal(0))
+                expect(metrics.call(today).continued).to(equal(false))
             }
             it("1つの場合") {
                 let metrics = WeekStreaks(data: [
                     (date: today, count: 1)
                 ])
-                expect(metrics.call(today)).to(equal(1))
+                expect(metrics.call(today).count).to(equal(1))
+                expect(metrics.call(today).continued).to(equal(true))
             }
         }
 
@@ -37,11 +39,18 @@ class WeekStreaksSpec : QuickSpec {
             ])
 
             it("その週のうちは継続する") {
-                expect(metrics.call(SpecHelper.date("2015-06-20"))).to(equal(3))
+                expect(metrics.call(SpecHelper.date("2015-06-20")).count).to(equal(3))
+                expect(metrics.call(SpecHelper.date("2015-06-20")).continued).to(equal(true))
             }
-
-            it("翌日曜日はStreakが継続している") {
-                expect(metrics.call(SpecHelper.date("2015-06-21"))).to(equal(3))
+            
+            it("翌日曜日はStreakは継続している数で取得するがその週で継続が途切れる状態になる") {
+                expect(metrics.call(SpecHelper.date("2015-06-21")).count).to(equal(3))
+                expect(metrics.call(SpecHelper.date("2015-06-21")).continued).to(equal(false))
+            }
+            
+            it("翌週のうちはStreakは継続している数で取得するがその週で継続が途切れる状態になる") {
+                expect(metrics.call(SpecHelper.date("2015-06-27")).count).to(equal(3))
+                expect(metrics.call(SpecHelper.date("2015-06-27")).continued).to(equal(false))
             }
         }
 
@@ -66,7 +75,8 @@ class WeekStreaksSpec : QuickSpec {
             ])
 
             it("翌々週になると継続が途切れる"){
-                expect(metrics.call(SpecHelper.date("2015-06-28"))).to(equal(0))
+                expect(metrics.call(SpecHelper.date("2015-06-28")).count).to(equal(0))
+                expect(metrics.call(SpecHelper.date("2015-06-28")).continued).to(equal(false))
             }
         }
     }

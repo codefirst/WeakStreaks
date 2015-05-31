@@ -7,25 +7,31 @@ class WeekStreaks {
         self.data = data
     }
 
-    func call() -> Int {
+    /// :returns: count: 週数, continued: 今週継続しているかどうか
+    func call() -> (count: Int, continued: Bool) {
         return call(NSDate())
     }
 
     // 日付指定でweek streakを計算する(ほぼテストから使うのが目的)
-    func call(today: NSDate) -> Int {
+    func call(today: NSDate) -> (count: Int, continued: Bool) {
         var weekStreaks = 0
+        var continued = true
         for w in 0...51 {
             let contributionsOfTheWeek = data.filter { today.numberOfWeeksFromWeekOfDate($0.date) == w }
+            let hasNonZeroContributions = contributionsOfTheWeek.reduce(0, combine: {$0 + $1.count}) > 0
 
-            // 今日の分がまだ取得データに載っていなく，その週のデータ数がゼロの場合はスキップ(前週から数える)
-            if w == 0 && contributionsOfTheWeek.count == 0 { continue }
+            // その週のcontributionが無いときは，前週から数える
+            if w == 0 && !hasNonZeroContributions {
+                continued = false
+                continue
+            }
 
-            if contributionsOfTheWeek.reduce(0, combine: {$0 + $1.count}) > 0 {
+            if hasNonZeroContributions {
                 weekStreaks += 1
             } else {
                 break
             }
         }
-        return weekStreaks
+        return (weekStreaks, continued)
     }
 }

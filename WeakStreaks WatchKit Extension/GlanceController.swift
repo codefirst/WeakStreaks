@@ -41,13 +41,12 @@ class GlanceController: WKInterfaceController {
 
         github?.contributions { (data: [ContributionByDate]) -> Void in
             let weekStreaks = WeekStreaks(data: data).call()
-            self.currentStreaks.setText("\(weekStreaks)")
-            self.streaksUnitLabel.setText(weekStreaks == 1 ? "week" : "weeks")
+            self.currentStreaks.setText("\(weekStreaks.count)")
+            self.streaksUnitLabel.setText(weekStreaks.count == 1 ? "week" : "weeks")
             let image = ContributionsCalendar(data: data).draw(self.graphSize)
             self.graph.setImage(image)
             
-            let onEndingStreaks = (weekStreaks == 0) // FIXME: weakStreaks > 0 かつ 今週コミットしないと途切れる，という状態があるはず
-            self.streaksGroup.setBackgroundColor(onEndingStreaks ? endingStreaksColor : UIColor.clearColor())
+            self.streaksGroup.setBackgroundColor(weekStreaks.continued ? UIColor.clearColor() : endingStreaksColor)
         }
     }
 
