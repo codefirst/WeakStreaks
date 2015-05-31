@@ -17,3 +17,17 @@ extension NSDate {
         return calendar.components(.CalendarUnitWeekOfYear, fromDate: sundayOfA, toDate: sundayOfB, options: nil).weekOfYear
     }
 }
+
+extension Array {
+    func takeWhile(@noescape f: (Element) -> Bool) -> Array {
+        var a = [Element]()
+        for elem in self {
+            if f(elem) {
+                a.append(elem)
+            } else {
+                break
+            }
+        }
+        return a
+    }
+}

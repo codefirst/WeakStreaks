@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import WatchKit
 
 
 private let colors: [(min: Int, color: UIColor)] = [
@@ -26,15 +27,16 @@ class ContributionsCalendar {
     }
     
     func draw(size: CGSize) -> UIImage {
+        let scale = WKInterfaceDevice.currentDevice().screenScale
         let imageRect = CGRectMake(0, 0, size.width, size.height)
-        UIGraphicsBeginImageContext(size)
+        UIGraphicsBeginImageContextWithOptions(size, true, scale)
         
         UIColor.blackColor().setFill()
         UIRectFill(imageRect)
         
         let cols = Int(7)
-        let margin = CGFloat(1)
-        let cellSide = floor((size.height - CGFloat(cols - 1) * margin) / CGFloat(cols))
+        let margin = CGFloat(1 / scale)
+        let cellSide = floor((size.height - CGFloat(cols - 1) * margin) / CGFloat(cols) * scale) / scale
         
         let today = NSDate()
         

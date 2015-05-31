@@ -11,7 +11,6 @@
 		130206DC1B0BEE7C00A5CB2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130206DB1B0BEE7C00A5CB2C /* ViewController.swift */; };
 		130206E11B0BEE7C00A5CB2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 130206E01B0BEE7C00A5CB2C /* Images.xcassets */; };
 		130206E41B0BEE7C00A5CB2C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130206E21B0BEE7C00A5CB2C /* LaunchScreen.xib */; };
-		130206F01B0BEE7D00A5CB2C /* WeakStreaksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130206EF1B0BEE7D00A5CB2C /* WeakStreaksTests.swift */; };
 		1302072A1B0BF0AE00A5CB2C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130207291B0BF0AE00A5CB2C /* InterfaceController.swift */; };
 		1302072C1B0BF0AE00A5CB2C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1302072B1B0BF0AE00A5CB2C /* NotificationController.swift */; };
 		1302072E1B0BF0AE00A5CB2C /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1302072D1B0BF0AE00A5CB2C /* GlanceController.swift */; };
@@ -27,6 +26,15 @@
 		13511EAB1B14AC9E00274A1E /* AppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 13511EA91B14AC9E00274A1E /* AppGroup.m */; };
 		13511EAC1B14AC9E00274A1E /* AppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 13511EA91B14AC9E00274A1E /* AppGroup.m */; };
 		13511EAF1B14AE4800274A1E /* SafeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13511EAE1B14AE4800274A1E /* SafeTableViewController.swift */; };
+		135B9CB41B196E7600EC8175 /* WeekStreaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B9CB31B196E7600EC8175 /* WeekStreaks.swift */; };
+		135B9CB51B196E7600EC8175 /* WeekStreaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B9CB31B196E7600EC8175 /* WeekStreaks.swift */; };
+		135B9CB61B196E7600EC8175 /* WeekStreaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B9CB31B196E7600EC8175 /* WeekStreaks.swift */; };
+		135B9CB81B196E7E00EC8175 /* DayStreaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B9CB71B196E7E00EC8175 /* DayStreaks.swift */; };
+		135B9CB91B196E7E00EC8175 /* DayStreaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B9CB71B196E7E00EC8175 /* DayStreaks.swift */; };
+		135B9CBA1B196E7E00EC8175 /* DayStreaks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B9CB71B196E7E00EC8175 /* DayStreaks.swift */; };
+		135B9CBD1B196F9800EC8175 /* WeekStreaksSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B9CBC1B196F9800EC8175 /* WeekStreaksSpec.swift */; };
+		135B9CBF1B19759E00EC8175 /* DayStreaksSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B9CBE1B19759E00EC8175 /* DayStreaksSpec.swift */; };
+		135B9CC11B1975E600EC8175 /* SpecHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B9CC01B1975E600EC8175 /* SpecHelper.swift */; };
 		13D45E171B0BF97B00C50675 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D45E161B0BF97B00C50675 /* Github.swift */; };
 		13D45E181B0BF97B00C50675 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D45E161B0BF97B00C50675 /* Github.swift */; };
 		13D45E191B0BF97B00C50675 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D45E161B0BF97B00C50675 /* Github.swift */; };
@@ -84,7 +92,6 @@
 		130206E31B0BEE7C00A5CB2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		130206E91B0BEE7D00A5CB2C /* WeakStreaksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeakStreaksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		130206EE1B0BEE7D00A5CB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		130206EF1B0BEE7D00A5CB2C /* WeakStreaksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakStreaksTests.swift; sourceTree = "<group>"; };
 		130207241B0BF0AE00A5CB2C /* WeakStreaks WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WeakStreaks WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		130207271B0BF0AE00A5CB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		130207281B0BF0AE00A5CB2C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -101,6 +108,11 @@
 		13511EA81B14AC9E00274A1E /* AppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGroup.h; sourceTree = "<group>"; };
 		13511EA91B14AC9E00274A1E /* AppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGroup.m; sourceTree = "<group>"; };
 		13511EAE1B14AE4800274A1E /* SafeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafeTableViewController.swift; sourceTree = "<group>"; };
+		135B9CB31B196E7600EC8175 /* WeekStreaks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekStreaks.swift; sourceTree = "<group>"; };
+		135B9CB71B196E7E00EC8175 /* DayStreaks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayStreaks.swift; sourceTree = "<group>"; };
+		135B9CBC1B196F9800EC8175 /* WeekStreaksSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekStreaksSpec.swift; sourceTree = "<group>"; };
+		135B9CBE1B19759E00EC8175 /* DayStreaksSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayStreaksSpec.swift; sourceTree = "<group>"; };
+		135B9CC01B1975E600EC8175 /* SpecHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecHelper.swift; sourceTree = "<group>"; };
 		1360ACF81B189FEA007C2529 /* Config.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Config.xcconfig.example; sourceTree = "<group>"; };
 		139A4F921B14A7B0000D7F14 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		139A4F931B14AAA0000D7F14 /* WeakStreaks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WeakStreaks.entitlements; sourceTree = "<group>"; };
@@ -206,8 +218,9 @@
 		130206EC1B0BEE7D00A5CB2C /* WeakStreaksTests */ = {
 			isa = PBXGroup;
 			children = (
-				130206EF1B0BEE7D00A5CB2C /* WeakStreaksTests.swift */,
+				135B9CBB1B196F8A00EC8175 /* Metrics */,
 				130206ED1B0BEE7D00A5CB2C /* Supporting Files */,
+				135B9CC01B1975E600EC8175 /* SpecHelper.swift */,
 			);
 			path = WeakStreaksTests;
 			sourceTree = "<group>";
@@ -269,11 +282,30 @@
 			name = Setting;
 			sourceTree = "<group>";
 		};
+		135B9CB21B196DFD00EC8175 /* Metrics */ = {
+			isa = PBXGroup;
+			children = (
+				135B9CB31B196E7600EC8175 /* WeekStreaks.swift */,
+				135B9CB71B196E7E00EC8175 /* DayStreaks.swift */,
+			);
+			name = Metrics;
+			sourceTree = "<group>";
+		};
+		135B9CBB1B196F8A00EC8175 /* Metrics */ = {
+			isa = PBXGroup;
+			children = (
+				135B9CBC1B196F9800EC8175 /* WeekStreaksSpec.swift */,
+				135B9CBE1B19759E00EC8175 /* DayStreaksSpec.swift */,
+			);
+			name = Metrics;
+			sourceTree = "<group>";
+		};
 		13D45E151B0BF97B00C50675 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				1343C5A51B13E872003976F2 /* Utils.swift */,
 				13D45E1F1B0E98B300C50675 /* Graph */,
+				135B9CB21B196DFD00EC8175 /* Metrics */,
 				13D45E1A1B0E988800C50675 /* Gateway */,
 				13511EAD1B14AD2F00274A1E /* Setting */,
 				13511EA51B14AC9D00274A1E /* WeakStreaks-Bridging-Header.h */,
@@ -607,11 +639,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				135B9CB81B196E7E00EC8175 /* DayStreaks.swift in Sources */,
 				13D45E171B0BF97B00C50675 /* Github.swift in Sources */,
 				EA9F0C991B10928700C6B881 /* ContributionsCalendar.swift in Sources */,
 				130206DC1B0BEE7C00A5CB2C /* ViewController.swift in Sources */,
 				13511EAF1B14AE4800274A1E /* SafeTableViewController.swift in Sources */,
 				130206DA1B0BEE7C00A5CB2C /* AppDelegate.swift in Sources */,
+				135B9CB41B196E7600EC8175 /* WeekStreaks.swift in Sources */,
 				1343C5A61B13E872003976F2 /* Utils.swift in Sources */,
 				13511EAA1B14AC9E00274A1E /* AppGroup.m in Sources */,
 			);
@@ -621,9 +655,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				135B9CBF1B19759E00EC8175 /* DayStreaksSpec.swift in Sources */,
+				135B9CB91B196E7E00EC8175 /* DayStreaks.swift in Sources */,
 				13D45E181B0BF97B00C50675 /* Github.swift in Sources */,
-				130206F01B0BEE7D00A5CB2C /* WeakStreaksTests.swift in Sources */,
 				1343C5A71B13E872003976F2 /* Utils.swift in Sources */,
+				135B9CBD1B196F9800EC8175 /* WeekStreaksSpec.swift in Sources */,
+				135B9CB51B196E7600EC8175 /* WeekStreaks.swift in Sources */,
+				135B9CC11B1975E600EC8175 /* SpecHelper.swift in Sources */,
 				13511EAB1B14AC9E00274A1E /* AppGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,11 +670,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				135B9CBA1B196E7E00EC8175 /* DayStreaks.swift in Sources */,
 				1302072C1B0BF0AE00A5CB2C /* NotificationController.swift in Sources */,
 				13511EAC1B14AC9E00274A1E /* AppGroup.m in Sources */,
 				1302072A1B0BF0AE00A5CB2C /* InterfaceController.swift in Sources */,
 				1343C5A81B13E872003976F2 /* Utils.swift in Sources */,
 				13D45E191B0BF97B00C50675 /* Github.swift in Sources */,
+				135B9CB61B196E7600EC8175 /* WeekStreaks.swift in Sources */,
 				1302072E1B0BF0AE00A5CB2C /* GlanceController.swift in Sources */,
 				EA9F0C9A1B10928700C6B881 /* ContributionsCalendar.swift in Sources */,
 			);
