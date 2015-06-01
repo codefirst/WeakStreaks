@@ -11,7 +11,7 @@ $ sudo gem install cocoapods
 ### ソースコードの取得
 ```
 $ git clone https://github.com/codefirst/WeakStreaks.git
-$ cd FlickSKK
+$ cd WeakStreaks
 ```
 
 ### 設定ファイルの書き換え
