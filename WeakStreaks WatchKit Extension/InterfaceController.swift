@@ -41,8 +41,8 @@ class InterfaceController: WKInterfaceController {
 
         github?.contributions { (data: [ContributionByDate]) -> Void in
             let weekStreaks = WeekStreaks(data: data).call()
-            self.weekStreaks.setText("\(weekStreaks)")
-            self.weekStreaksUnit.setText(weekStreaks == 1 ? "week" : "weeks")
+            self.weekStreaks.setText("\(weekStreaks.count)")
+            self.weekStreaksUnit.setText(weekStreaks.count == 1 ? "week" : "weeks")
 
             let dayStreaks = DayStreaks(data: data).call()
             self.dayStreaks.setText("\(dayStreaks)")

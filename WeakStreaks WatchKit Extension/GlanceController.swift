@@ -9,7 +9,12 @@
 import WatchKit
 import Foundation
 
+
+private let endingStreaksColor = UIColor(hue: 0, saturation: 0.8, brightness: 0.8, alpha: 1.0)
+
+
 class GlanceController: WKInterfaceController {
+    @IBOutlet weak var streaksGroup: WKInterfaceGroup!
     @IBOutlet weak var currentStreaks: WKInterfaceLabel!
     @IBOutlet weak var streaksUnitLabel: WKInterfaceLabel!
     @IBOutlet weak var graph: WKInterfaceImage!
@@ -36,10 +41,12 @@ class GlanceController: WKInterfaceController {
 
         github?.contributions { (data: [ContributionByDate]) -> Void in
             let weekStreaks = WeekStreaks(data: data).call()
-            self.currentStreaks.setText("\(weekStreaks)")
-            self.streaksUnitLabel.setText(weekStreaks == 1 ? "week" : "weeks")
+            self.currentStreaks.setText("\(weekStreaks.count)")
+            self.streaksUnitLabel.setText(weekStreaks.count == 1 ? "week" : "weeks")
             let image = ContributionsCalendar(data: data).draw(self.graphSize)
             self.graph.setImage(image)
+            
+            self.streaksGroup.setBackgroundColor(weekStreaks.continued ? UIColor.clearColor() : endingStreaksColor)
         }
     }
 
