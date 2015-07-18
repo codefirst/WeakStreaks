@@ -5,9 +5,9 @@ use_frameworks!
 
 link_with 'WeakStreaks', 'WeakStreaks WatchKit Extension'
 
-pod 'Alamofire'
+pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'swift-2.0'
 
 target 'WeakStreaksTests' do
   pod 'Quick'
-  pod 'Nimble'
+  pod 'Nimble', '2.0.0-rc.1'
 end

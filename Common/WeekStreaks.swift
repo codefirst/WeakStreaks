@@ -7,7 +7,7 @@ class WeekStreaks {
         self.data = data
     }
 
-    /// :returns: count: 週数, continued: 今週継続しているかどうか
+    /// - returns: count: 週数, continued: 今週継続しているかどうか
     func call() -> (count: Int, continued: Bool) {
         return call(NSDate())
     }
