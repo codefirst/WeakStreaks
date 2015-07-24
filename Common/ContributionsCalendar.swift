@@ -10,7 +10,7 @@ private let colors: [(min: Int, color: UIColor)] = [
     (1, UIColor(red: 212 / 255.0, green: 232 / 255.0, blue: 127 / 255.0, alpha: 1.0)),
     (0, UIColor(white: 238 / 255.0, alpha: 1.0)),
 ]
-private func color(#contributions: Int) -> UIColor {
+private func color(contributions contributions: Int) -> UIColor {
     for c in colors {
         if contributions >= c.min {
             return c.color

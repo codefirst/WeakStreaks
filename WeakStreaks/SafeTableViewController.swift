@@ -35,7 +35,7 @@ class SafeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        if let selected = tableView.indexPathForSelectedRow() {
+        if let selected = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(selected, animated: animated)
         }
         tableView.reloadData()

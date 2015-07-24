@@ -28,7 +28,7 @@ class ViewController: SafeTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        println(AppGroup.appGroupID())
+        print(AppGroup.appGroupID())
         if let username = AppGroup.userDefaults().stringForKey("username") {
             usernameField.text = username
         }
@@ -53,7 +53,7 @@ class ViewController: SafeTableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kCellID) as? UITableViewCell ?? UITableViewCell(style: .Default, reuseIdentifier: kCellID)
+        let cell = tableView.dequeueReusableCellWithIdentifier(kCellID) ?? UITableViewCell(style: .Default, reuseIdentifier: kCellID)
 
         cell.textLabel?.text = NSLocalizedString("Username", comment:"")
         usernameField.frame = CGRectMake(0, 0, cell.frame.width - 80, 130)

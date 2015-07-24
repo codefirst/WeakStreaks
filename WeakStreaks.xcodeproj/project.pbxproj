@@ -39,8 +39,6 @@
 		13D45E181B0BF97B00C50675 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D45E161B0BF97B00C50675 /* Github.swift */; };
 		13D45E191B0BF97B00C50675 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D45E161B0BF97B00C50675 /* Github.swift */; };
 		16980DC950B63DE18615493B /* Pods_WeakStreaksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EDC8C159B68A2AFACE366 /* Pods_WeakStreaksTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		DDD6F0D25AFC54004F661369 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADC48A6736ED4E2F35030BB /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		E86F5332BA1031CF25275F92 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADC48A6736ED4E2F35030BB /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		EA9F0C991B10928700C6B881 /* ContributionsCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9F0C981B10928700C6B881 /* ContributionsCalendar.swift */; };
 		EA9F0C9A1B10928700C6B881 /* ContributionsCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9F0C981B10928700C6B881 /* ContributionsCalendar.swift */; };
 /* End PBXBuildFile section */
@@ -132,7 +130,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E86F5332BA1031CF25275F92 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDD6F0D25AFC54004F661369 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +421,8 @@
 		130206CC1B0BEE7C00A5CB2C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = mzp;
 				TargetAttributes = {
@@ -848,10 +846,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -871,10 +865,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = WeakStreaksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

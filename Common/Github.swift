@@ -17,7 +17,7 @@ class Github {
 
     func contributions(f : (data : [ContributionByDate]) -> Void) {
         Alamofire
-            .request(.GET, "\(ENTRY_POINT)/\(user)")
+            .request(.GET, URLString: "\(ENTRY_POINT)/\(user)")
             .responseJSON { (_, _, json, _) in
                 let dict = json as? NSDictionary
                 let data = (dict?["data"] as? [String:Int]).map{ self.parseData($0) }
@@ -36,7 +36,7 @@ class Github {
                 ys.append((date: date, count: count))
             }
         }
-        ys.sort {
+        ys.sortInPlace {
             $0.date.compare($1.date) == .OrderedAscending
         }
 
