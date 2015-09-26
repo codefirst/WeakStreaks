@@ -17,9 +17,9 @@ class Github {
 
     func contributions(f : (data : [ContributionByDate]) -> Void) {
         Alamofire
-            .request(.GET, URLString: "\(ENTRY_POINT)/\(user)")
-            .responseJSON { (_, _, json, _) in
-                let dict = json as? NSDictionary
+            .request(.GET, "\(ENTRY_POINT)/\(user)")
+            .responseJSON { (_, _, result) in
+                let dict = result.value as? NSDictionary
                 let data = (dict?["data"] as? [String:Int]).map{ self.parseData($0) }
                 f(data: data ?? [])
         }

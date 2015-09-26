@@ -39,6 +39,8 @@
 		13D45E181B0BF97B00C50675 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D45E161B0BF97B00C50675 /* Github.swift */; };
 		13D45E191B0BF97B00C50675 /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D45E161B0BF97B00C50675 /* Github.swift */; };
 		16980DC950B63DE18615493B /* Pods_WeakStreaksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5EDC8C159B68A2AFACE366 /* Pods_WeakStreaksTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		21D7BF98469929B079E3D472 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADC48A6736ED4E2F35030BB /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B121589B91014CB85ED6DB7B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADC48A6736ED4E2F35030BB /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		EA9F0C991B10928700C6B881 /* ContributionsCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9F0C981B10928700C6B881 /* ContributionsCalendar.swift */; };
 		EA9F0C9A1B10928700C6B881 /* ContributionsCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9F0C981B10928700C6B881 /* ContributionsCalendar.swift */; };
 /* End PBXBuildFile section */
@@ -130,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B121589B91014CB85ED6DB7B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D7BF98469929B079E3D472 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,20 +48,6 @@
                ReferencedContainer = "container:WeakStreaks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "130206E81B0BEE7D00A5CB2C"
-               BuildableName = "WeakStreaksTests.xctest"
-               BlueprintName = "WeakStreaksTests"
-               ReferencedContainer = "container:WeakStreaks.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -70,16 +56,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "130206E81B0BEE7D00A5CB2C"
-               BuildableName = "WeakStreaksTests.xctest"
-               BlueprintName = "WeakStreaksTests"
-               ReferencedContainer = "container:WeakStreaks.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
